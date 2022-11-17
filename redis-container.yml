@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  my-redis:
+    container_name: my-redis-ctr
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
+    volumes:
+      - my-redis:/data
+
+networks:
+  my-redis:
+    driver: bridge
+
+volumes: 
+  my-redis:
