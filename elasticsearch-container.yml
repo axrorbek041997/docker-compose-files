@@ -9,7 +9,7 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - network.host=0.0.0.0
-      - http.port=9200
+      - http.port=9200 # container inner port
       - xpack.security.enabled=false
       - discovery.type=single-node
     ulimits:
